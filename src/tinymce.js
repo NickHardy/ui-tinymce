@@ -24,7 +24,7 @@ angular.module('ui.tinymce', [])
         }
 
         if (attrs.uiTinymce) {
-          expression = scope.$eval(attrs.uiTinymce);
+          expression = angular.copy(scope.$eval(attrs.uiTinymce));
         } else {
           expression = {};
         }
